@@ -5,32 +5,11 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+h1 {
+  background-color: #624135;
+  border-radius: 10px;
+  padding: 5px;
+  border: 1px solid #e6e6e6;
 }
 
 .card {
@@ -39,4 +18,131 @@
 
 .read-the-docs {
   color: #888;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  color: #ffffff;
+  background:
+    linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .6)),
+    url('https://as2.ftcdn.net/v2/jpg/03/40/07/85/1000_F_340078556_YD52qpLaiTbO5E0OF90FuOaAq3sZr8yF.jpg') center / cover no-repeat fixed;
+}
+
+.bookshelfDiv,
+.formDiv,
+.bookCardsDiv,
+form,
+label {
+  text-align: left;
+}
+
+.bookshelfDiv {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-top: 16px;
+}
+
+.formDiv {
+  flex: 1 1 320px;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 16px;
+  background: #624135
+}
+
+.bookCardsDiv {
+  flex: 2 1 520px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+p.noBook {
+    color: #fff;
+    background: #624135;
+    padding: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d7d7d7;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+input[type="text"]:focus {
+  border-color: #333;
+}
+
+button {
+  padding: 10px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4e3228;
+;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  opacity: 0.9;
+}
+
+button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.bookCard {
+  flex: 1 1 220px;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 12px;
+  background: #624135;
+}
+
+.bookTitle {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+}
+
+.bookAuthor {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+      padding: 10px 0;
+}
+
+.noBook {
+  color: #777;
+  font-style: italic;
+}
+
+@media (max-width: 720px) {
+  .bookshelfDiv {
+    flex-direction: column;
+  }
 }
